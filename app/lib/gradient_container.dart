@@ -1,17 +1,17 @@
 import 'package:app/Styledtext.dart';
 import 'package:flutter/material.dart';
 
-var startAlignment = Alignment.topLeft;
-var endAlignment = Alignment.bottomRight;
+const startAlignment = Alignment.topLeft;
+const endAlignment = Alignment.bottomRight;
 
 class GradiantContainer extends StatelessWidget {
   const GradiantContainer({super.key});
   @override
   Widget build(context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         gradient: LinearGradient(
-          colors: const [
+          colors: [
             Color.fromARGB(255, 109, 41, 226),
             Color.fromARGB(255, 146, 103, 220)
           ],
@@ -19,7 +19,7 @@ class GradiantContainer extends StatelessWidget {
           end: endAlignment,
         ),
       ),
-      child: const Center(child: Styledtext()),
+      child: const Center(child: Styledtext('Hello!')),
     );
   }
 }
